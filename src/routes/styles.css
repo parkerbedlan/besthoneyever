@@ -1,0 +1,263 @@
+@font-face {
+	font-family: cheap-pine-sans;
+	src: url('cheap_pine_sans.otf');
+}
+
+html {
+	color: #2a1e5c;
+}
+
+body {
+	background-color: #fff8f0;
+}
+
+h1 {
+	font-family: cheap-pine-sans;
+	font-size: 50px;
+	text-align: center;
+	/* color: #2a1e5c;	 */
+}
+
+h2 {
+	font-family: cheap-pine-sans;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	padding-left: 2em;
+	padding-right: 2em;
+	font-size: 30px;
+}
+
+p,
+h3 {
+	font-family: Tahoma, Geneva, sans-serif;
+	letter-spacing: 1px;
+	word-spacing: 2px;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+p {
+	font-size: 16px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+/* ----- Containers ----- */
+
+.flexbox {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.flexitem {
+	max-width: 100%;
+	height: 100%;
+}
+
+.flexitem img {
+	max-width: 100%;
+	height: 100%;
+}
+
+.double div {
+	padding: 1%;
+	width: 47%;
+}
+
+.triple div {
+	padding: 1%;
+	width: 30.333%;
+}
+
+.respbox {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.respitem {
+	display: inline-block;
+	flex-shrink: 0;
+}
+
+.textbox {
+	align-items: flex-start;
+}
+
+.picbox {
+	text-align: center;
+}
+
+/* ----- Gallery ----- */
+
+.photorow {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 0px;
+	padding-right: 4px;
+}
+
+.photocol {
+	flex: 32%;
+	max-width: 32%;
+	padding-top: 0px;
+	padding-right: 4px;
+}
+
+.photocol img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.vid-container {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/* ----- Forms ----- */
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.banner {
+	display: block;
+	text-align: center;
+	background-color: #ffe0bd;
+	padding: 1em;
+}
+
+.textform {
+	display: inline-block;
+	margin: 0px;
+	width: 50%;
+	height: auto;
+	padding: 12px 20px;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	box-sizing: border-box;
+	border: 0px solid transparent;
+}
+
+.submit {
+	display: inline-block;
+	margin: 0px;
+	padding: 12px 10px;
+	font-family: cheap-pine-sans;
+	font-size: 18px;
+	letter-spacing: 2px;
+	background-color: #2a1e5c;
+	color: #dfbe63;
+}
+
+/* ----- Header and Navbar ----- */
+
+#container_header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+}
+
+#logotop {
+	width: 100%;
+
+	background-color: #ffedd9;
+	font-family: cheap-pine-sans;
+}
+
+.item_header img {
+	max-width: 100%;
+	height: 100%;
+}
+
+.item_header {
+	max-width: 100%;
+	height: 100%;
+}
+
+nav a {
+	text-decoration: none;
+	font-size: 200%;
+	font-family: cheap-pine-sans;
+	display: inline-block;
+	width: 12%;
+	/*17.6% for fifths, 14.333% for sixths. basically, it's ((100-2)/n)-2, 2 because of the 1% pad on each side*/
+	padding: 1%;
+	text-align: center;
+}
+
+nav a:nth-child(2n) {
+	background-color: #dfbe63;
+	color: #2a1e5c;
+}
+
+nav a:nth-child(2n + 1) {
+	background-color: #2a1e5c;
+	color: #dfbe63;
+}
+
+/* ----- Responsiveness ----- */
+
+@media screen and (max-width: 1200px) {
+	nav a {
+		width: 30%;
+		display: inline-block;
+	}
+
+	.triple,
+	.double .respitem {
+		width: 98%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	nav a {
+		width: 47%;
+		display: inline-block;
+	}
+
+	nav a:nth-child(4n),
+	nav a:nth-child(4n-3) {
+		background-color: #2a1e5c !important;
+		color: #dfbe63 !important;
+	}
+
+	nav a:nth-child(4n-1),
+	nav a:nth-child(4n-2) {
+		background-color: #dfbe63 !important;
+		color: #2a1e5c !important;
+	}
+
+	.respitem p,
+	h3 {
+		font-size: 14px;
+	}
+
+	.photocol {
+		flex: 100%;
+		max-width: 100%;
+	}
+
+	.textform {
+		font-size: 14px;
+	}
+
+	.vid-container video {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.textform {
+		font-size: 11px;
+	}
+}
