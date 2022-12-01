@@ -37,10 +37,15 @@
 		Want to order a jar of BJ's Orange Blossum Honey? Enter your email and Beth will contact you
 		right away!
 	</h3>
-	<form action="email_add.php" method="POST">
-		<input type="email" name="emailaddress" class="textform" placeholder="Your Email Address" />
+	<form method="POST">
+		<input
+			type="email"
+			name="customerEmailAddress"
+			class="textform"
+			placeholder="Your Email Address"
+		/>
 		<input type="submit" value="Send" class="submit " />
-		<input type="hidden" name="product" value="honey" />
+		<!-- <input type="hidden" name="product" value="honey" /> -->
 	</form>
 </div>
 <div class="flexbox double picbox">

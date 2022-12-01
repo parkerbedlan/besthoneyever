@@ -23,10 +23,14 @@
 		Want to order some of BJ's soothing natural lip balm? Enter your email and Beth will contact you
 		right away!
 	</h3>
-	<form action="email_add.php" method="POST">
-		<input type="email" name="emailaddress" class="textform" placeholder="Your Email Address" />
-		<input type="submit" value="Send" class="submit " />
-		<input type="hidden" name="product" value="lipbalm" />
+	<form method="POST">
+		<input
+			type="email"
+			name="customerEmailAddress"
+			class="textform"
+			placeholder="Your Email Address"
+		/>
+		<input type="submit" value="Send" class="submit" />
 	</form>
 </div>
 <div class="flexbox triple picbox">
